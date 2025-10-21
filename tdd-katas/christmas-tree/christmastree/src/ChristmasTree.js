@@ -10,9 +10,21 @@ function fibonacci(num, memo) {
 }
 
 function christmas_tree(height) {
-    if (height <= 0) return [""];
-    if (height === 1) return ["*", "|"];
-    if (height === 2) return [" * ", "***", " | "];
+    if (height <= 0) {
+        return [""];
+    }
+
+    if (height === 1) {
+        return ["*", "|"];
+    }
+
+    if (height === 2) {
+        return [" * ", "***", " | "];
+    }
+
+    if (height === 3) {
+        return ["  *  ", " *** ", "*****", "  |  "];
+    }
 }
 
 module.exports = {

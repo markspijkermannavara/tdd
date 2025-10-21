@@ -24,4 +24,8 @@ describe("Christmas Tree", function() {
     it("returns a tree when height is 2", function() {
         expect(christmas_tree(2)).toEqual([" * ", "***", " | "]);
     });
+
+    it("returns a tree when height is 3", function() {
+        expect(christmas_tree(3)).toEqual(["  *  ", " *** ", "*****", "  |  "]);
+    });
 });
