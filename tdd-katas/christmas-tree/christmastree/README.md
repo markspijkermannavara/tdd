@@ -7,28 +7,36 @@ one more step needed to get up and running.
 ## Installing the required packages
 
 ```bash
-$ poetry install
+$ npm install
 ```
 
 ## Running the tests
 
-To run tests once, use
+You can continuously run the test by using
 
 ```bash
-$ ./run_tests.sh
+$ npm run test
 ```
 
-If you want to run test continuously, use
+Code coverage only works in stand-alone mode, so it does _not_ apply
+when running tests in the browser. 
+If you opt for code coverage, you may show 
+the coverage by running
 
-```bash
-$ ./run_watch.sh
+```shell
+$ npx http-server ./coverage/lcov-report/
+```
+
+or alternatively
+
+```shell
+$ npm run report
 ```
 
 # Introduction TDD
 
 TDD gives you a fast feedback cycle, and helps you evolve a
-solution incrementally, in _tiny_ increments.  
-TDD gives you feedback
+solution incrementally, in _tiny_ increments.  TDD gives you feedback
 on your design and lets you make many small improvements to your
 code. You can do this with confidence because the tests will catch any
 accidental regression as you apply these refactorings.

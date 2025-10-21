@@ -1,0 +1,22 @@
+{
+  "name": "GameOfLife",
+  "description": "This kata practices TDD",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "Your name",  
+  "dependencies": {
+
+    "@types/jest": "^29.5.12",
+    "jest": "^29.7",
+
+
+    "http-server": "^14.1.1"
+  },
+  "scripts": {
+
+
+      "test": "jest",
+      "watch": "jest --watchAll"
+
+  }
+}
