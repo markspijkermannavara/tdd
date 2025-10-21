@@ -15,16 +15,34 @@ function christmas_tree(height) {
     }
 
     if (height === 1) {
-        return ["*", "|"];
+        return [
+            pad_string(0, "*"),
+            pad_string(0, "|"),
+        ];
     }
 
     if (height === 2) {
-        return [" * ", "***", " | "];
+        return [
+            pad_string(1, "*"),
+            pad_string(0, "***"),
+            pad_string(1, "|"),
+        ];
     }
 
     if (height === 3) {
-        return ["  *  ", " *** ", "*****", "  |  "];
+        return [
+            pad_string(2, "*"),
+            pad_string(1, "***"),
+            pad_string(0, "*****"),
+            pad_string(2, "|"),
+        ];
     }
+}
+
+function pad_string(padding_amount, string, pad_char=" ") {
+    let padding = pad_char.repeat(padding_amount);
+
+    return padding + string + padding;
 }
 
 module.exports = {
