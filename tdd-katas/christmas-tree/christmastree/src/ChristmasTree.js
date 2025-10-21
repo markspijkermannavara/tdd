@@ -9,34 +9,20 @@ function fibonacci(num, memo) {
   return (memo[num] = fibonacci(num - 1, memo) + fibonacci(num - 2, memo));
 }
 
-function christmas_tree(height) {
-    if (height <= 0) {
+function christmas_tree(tree_height) {
+    if (tree_height <= 0) {
         return [""];
     }
 
-    if (height === 1) {
-        return [
-            create_branch(1, 1),
-            pad_string(0, "|"),
-        ];
+    let tree = [];
+
+    for (let current_layer = 1; current_layer <= tree_height; current_layer++) {
+        tree.push(create_branch(current_layer, tree_height));
     }
 
-    if (height === 2) {
-        return [
-            create_branch(1, 2),
-            create_branch(2, 2),
-            pad_string(1, "|"),
-        ];
-    }
+    tree.push(pad_string(tree_height - 1, "|"));
 
-    if (height === 3) {
-        return [
-            create_branch(1, 3),
-            create_branch(2, 3),
-            create_branch(3, 3),
-            pad_string(2, "|"),
-        ];
-    }
+    return tree;
 }
 
 function create_branch(level, total_levels) {
