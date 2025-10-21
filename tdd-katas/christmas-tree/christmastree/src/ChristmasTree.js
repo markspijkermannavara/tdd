@@ -10,7 +10,7 @@ function fibonacci(num, memo) {
 }
 
 function christmas_tree(height) {
-    if (height === 0) return [""];
+    if (height <= 0) return [""];
 }
 
 module.exports = {
